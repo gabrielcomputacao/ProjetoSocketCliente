@@ -18,7 +18,7 @@ public class ServerSock {
 				//por isso usamos try e catch
 				
 				serverSocket = new ServerSocket(port);
-				
+				System.out.println("Server create na porta: " + port);
 				
 				//testandooooo 2.0
 			} catch (IOException e) {
