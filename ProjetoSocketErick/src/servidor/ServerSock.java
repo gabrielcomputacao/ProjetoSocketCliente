@@ -6,6 +6,8 @@ import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import javax.swing.JOptionPane;
+
 public class ServerSock {
 
 		private ServerSocket serverSocket;
@@ -18,7 +20,7 @@ public class ServerSock {
 				//por isso usamos try e catch
 				
 				serverSocket = new ServerSocket(port);
-				System.out.println("Server create na porta: " + port);
+				JOptionPane.showMessageDialog(null,"Server create na porta: " + port);
 				
 				//testandooooo 2.0
 			} catch (IOException e) {

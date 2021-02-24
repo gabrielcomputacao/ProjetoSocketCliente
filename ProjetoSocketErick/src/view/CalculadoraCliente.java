@@ -5,13 +5,20 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+
+
+
+import enumOperacoes.EnumOp;
+import transport.Operacoes;
+
 import java.awt.event.ActionListener;
 
 import java.awt.event.ActionEvent;
 
-public class CalculadoraCliente {
+public class CalculadoraCliente  {
 
 	private JFrame frmCalculadora;
 	private JTextField num_primeiro;
@@ -43,7 +50,7 @@ public class CalculadoraCliente {
 	}
 	
 	
-	
+	boolean enviar=false;
 	String numeroUM="",numDois="";
 	int cont=1;
 	
@@ -336,9 +343,24 @@ public class CalculadoraCliente {
 		frmCalculadora.getContentPane().add(okButt);
 		
 		JButton startbutt = new JButton("START");
+		startbutt.addActionListener(new ActionListener() {
+			public  void actionPerformed(ActionEvent e) {
+				String teste=envia();
+				System.out.println(teste);
+			}
+			public String envia() {
+				System.out.println("oii");
+				return "dfgfdgdg";
+			}
+		});
 		startbutt.setBounds(362, 43, 81, 23);
 		frmCalculadora.getContentPane().add(startbutt);
+			
 	}
+
+	
+	
+	
 
 	
 }
